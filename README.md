@@ -209,7 +209,7 @@ The user never knows they're using fintech infrastructure. They just know their 
 **Event:** Blostem "Hack to the Future" Hackathon 2026  
 **Track:** Open Track (Track 05)  
 **Builder:** Solo  
-**Demo Day:** May 9, 2026 — Blostem HQ, Noida
+
 
 ---
 
