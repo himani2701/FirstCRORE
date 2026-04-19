@@ -4,7 +4,7 @@
 
 A financial clarity and smart FD investment platform built for India's first-time earners — the 23-year-olds with ₹40,000 sitting in a savings account losing silently to inflation, with no one to ask.
 
-Built for the **Blostem "Hack to the Future" Hackathon 2026** — Open Track (Track 05 + Track 02).
+Built for the **Blostem "Hack to the Future" Hackathon 2026** — Open Track .
 
 ---
 
