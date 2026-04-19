@@ -1,0 +1,77 @@
+.loading-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+}
+
+.loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  text-align: center;
+  max-width: 340px;
+  padding: 2rem;
+}
+
+.loading-icon {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-rupee {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--accent-amber);
+  z-index: 1;
+  position: relative;
+}
+
+.loading-ring {
+  position: absolute;
+  inset: 0;
+  border: 3px solid transparent;
+  border-top-color: var(--accent-amber);
+  border-right-color: rgba(232,160,32,0.3);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--text-primary);
+}
+
+.loading-message {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  min-height: 2.5em;
+  line-height: 1.6;
+  transition: opacity 0.3s ease;
+}
+
+.loading-progress {
+  width: 200px;
+  height: 3px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.loading-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-gold), var(--accent-bright));
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}

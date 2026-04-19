@@ -1,0 +1,334 @@
+.landing {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.landing-bg-grid {
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(232,160,32,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232,160,32,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.landing-bg-glow {
+  position: fixed;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 400px;
+  background: radial-gradient(ellipse, rgba(232,160,32,0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.landing-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.75rem;
+  padding-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.logo-rupee {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--accent-amber);
+  color: #0A0808;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.landing-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+  gap: 1.75rem;
+}
+
+.landing-eyebrow {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-amber);
+  background: rgba(232,160,32,0.08);
+  padding: 0.35rem 1rem;
+  border-radius: 100px;
+  border: 1px solid rgba(232,160,32,0.2);
+}
+
+.landing-headline {
+  max-width: 640px;
+  color: var(--text-primary);
+}
+
+.landing-headline em {
+  font-style: italic;
+  color: var(--accent-amber);
+}
+
+.landing-subtext {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  max-width: 480px;
+  line-height: 1.8;
+}
+
+/* Shock input */
+.shock-input-section {
+  width: 100%;
+  max-width: 580px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  animation: fadeUp 0.5s ease 0.4s forwards, pulse-glow 3s ease 1s infinite;
+}
+
+.shock-prompt {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+}
+
+.salary-input-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.salary-input-wrapper {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0 1rem;
+  transition: var(--transition);
+}
+
+.salary-input-wrapper:focus-within {
+  border-color: var(--accent-amber);
+  box-shadow: 0 0 0 3px rgba(232,160,32,0.1);
+}
+
+.rupee-prefix {
+  color: var(--accent-amber);
+  font-weight: 600;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.per-month {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.salary-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--text-primary);
+  padding: 0.75rem 0.5rem;
+  -moz-appearance: textfield;
+}
+
+.salary-input::-webkit-inner-spin-button,
+.salary-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.check-btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.9rem;
+}
+
+.check-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.btn-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(0,0,0,0.2);
+  border-top-color: #0A0808;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Shock reveal */
+.shock-reveal {
+  width: 100%;
+  max-width: 580px;
+}
+
+.shock-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(224,90,78,0.2);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  text-align: center;
+}
+
+.shock-icon {
+  font-size: 2.5rem;
+  animation: countUp 0.4s ease;
+}
+
+.shock-message {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.shock-headline {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.shock-detail {
+  font-size: 0.875rem;
+}
+
+.shock-comparison {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.comparison-item {
+  flex: 1;
+  max-width: 160px;
+  background: var(--bg-input);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.comparison-item.red { border: 1px solid rgba(224,90,78,0.2); }
+.comparison-item.green { border: 1px solid rgba(78,173,122,0.2); }
+
+.comparison-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.comparison-value {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.comparison-sublabel {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.comparison-arrow {
+  color: var(--accent-amber);
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.shock-extra {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  background: var(--green-bg);
+  padding: 0.6rem 1.25rem;
+  border-radius: 100px;
+  border: 1px solid rgba(78,173,122,0.15);
+}
+
+.start-btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+/* Feature pills */
+.landing-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+}
+
+.feature-pill {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+.feature-pill:hover {
+  border-color: var(--border-accent);
+  color: var(--text-primary);
+}
+
+.landing-footer {
+  padding: 1.5rem 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
