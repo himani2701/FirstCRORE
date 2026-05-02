@@ -1,6 +1,6 @@
 # FirstCrore — Financial Analytics Platform
 
-> Built for the Blostem "Hack to the Future" Hackathon 2026
+
 
 A financial analytics platform for India's first-time earners. Beyond basic expense tracking, FirstCrore surfaces spending patterns, scores financial health, and builds a personalised FD ladder.
 
@@ -67,6 +67,4 @@ python report_generator.py --demo --income 55000 --expenses 32000
 | `/api/optimize`               | POST   | FD ladder optimiser            |
 | `/api/health`                 | GET    | Server health check            |
 
-## Interview Description
 
-> "FirstCrore is a financial analytics platform targeting India's first-time earners. I built an analytics layer using rule-based scoring to flag at-risk users (mirroring how ZS builds decision support tools), a spending breakdown dashboard with SVG charts, and a Python data pipeline using pandas that generates CSV reports and matplotlib visualisations — simulating real analytics workflows. The backend exposes REST APIs equivalent to MongoDB aggregation pipelines."
