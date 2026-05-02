@@ -1,0 +1,101 @@
+/* ===== ONBOARDING — LIGHT THEME ===== */
+.onboarding { min-height:100vh; display:flex; flex-direction:column; background:var(--bg-primary); }
+
+.onboarding-header {
+  display:flex; align-items:center; justify-content:space-between;
+  padding-top:1.25rem; padding-bottom:1.25rem;
+  background:var(--bg-card); border-bottom:1px solid var(--border);
+  box-shadow:var(--shadow-sm); position:sticky; top:0; z-index:10;
+}
+
+.onboarding-main { flex:1; padding-top:2.5rem; padding-bottom:4rem; }
+
+.chat-window { display:flex; flex-direction:column; gap:1.25rem; max-width:600px; margin:0 auto; }
+
+.chat-bubble {
+  background:var(--bg-card); border:1px solid var(--border);
+  border-radius:var(--radius-lg); padding:0.85rem 1.1rem;
+  font-size:0.88rem; color:var(--text-secondary);
+  box-shadow:var(--shadow-sm);
+}
+
+.chat-question { display:flex; gap:0.85rem; align-items:flex-start; }
+
+.question-avatar {
+  width:38px; height:38px; border-radius:10px;
+  background:var(--accent-amber); color:#fff;
+  display:flex; align-items:center; justify-content:center;
+  font-size:0.75rem; font-weight:800; flex-shrink:0; margin-top:2px;
+  box-shadow:0 2px 8px rgba(245,158,11,0.3);
+}
+
+.question-content { display:flex; flex-direction:column; gap:0.3rem; }
+.question-text { font-size:1.05rem; font-weight:600; color:var(--text-primary); line-height:1.5; }
+.question-subtext { font-size:0.85rem; color:var(--text-muted); }
+
+.input-area { display:flex; flex-direction:column; gap:0.75rem; }
+
+.number-input-row { display:flex; gap:0.75rem; flex-wrap:wrap; }
+
+.salary-input-wrapper {
+  flex:1; min-width:180px; display:flex; align-items:center;
+  background:var(--bg-card); border:1.5px solid var(--border);
+  border-radius:var(--radius-md); padding:0 1rem;
+  transition:var(--transition); box-shadow:var(--shadow-sm);
+}
+.salary-input-wrapper:focus-within { border-color:var(--accent-amber); box-shadow:0 0 0 3px rgba(245,158,11,0.10); }
+
+.rupee-prefix { color:var(--accent-gold); font-weight:700; font-size:1.05rem; flex-shrink:0; }
+.per-month    { color:var(--text-muted); font-size:0.82rem; flex-shrink:0; white-space:nowrap; }
+
+.salary-input {
+  flex:1; background:transparent; border:none; outline:none;
+  font-family:var(--font-sans); font-size:0.98rem; color:var(--text-primary);
+  padding:0.78rem 0.5rem; -moz-appearance:textfield;
+}
+.salary-input::-webkit-inner-spin-button,
+.salary-input::-webkit-outer-spin-button { -webkit-appearance:none; }
+
+.multiselect-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.6rem; }
+@media (max-width:500px) { .multiselect-grid { grid-template-columns:1fr; } }
+
+.goal-option {
+  display:flex; align-items:center; gap:0.65rem;
+  padding:0.8rem 0.9rem; background:var(--bg-card);
+  border:1.5px solid var(--border); border-radius:var(--radius-md);
+  cursor:pointer; transition:var(--transition); text-align:left;
+  font-family:var(--font-sans); font-size:0.85rem; color:var(--text-secondary);
+  box-shadow:var(--shadow-sm); position:relative;
+}
+.goal-option:hover { border-color:var(--accent-amber); color:var(--text-primary); }
+.goal-option.selected { border-color:var(--accent-amber); background:rgba(245,158,11,0.06); color:var(--text-primary); }
+.goal-emoji { font-size:1.15rem; }
+.goal-label { flex:1; font-weight:500; }
+.goal-check { color:var(--accent-gold); font-weight:700; font-size:0.9rem; }
+
+.next-from-multi { grid-column:1/-1; margin-top:0.25rem; }
+
+.risk-options { display:flex; flex-direction:column; gap:0.65rem; }
+.risk-option {
+  display:flex; align-items:center; gap:1rem;
+  padding:1rem 1.1rem; background:var(--bg-card);
+  border:1.5px solid var(--border); border-radius:var(--radius-md);
+  cursor:pointer; transition:var(--transition);
+  font-family:var(--font-sans); box-shadow:var(--shadow-sm);
+}
+.risk-option:hover   { border-color:var(--accent-amber); }
+.risk-option.selected{ border-color:var(--accent-amber); background:rgba(245,158,11,0.06); }
+.risk-emoji { font-size:1.5rem; flex-shrink:0; }
+.risk-text { display:flex; flex-direction:column; gap:0.15rem; flex:1; }
+.risk-text strong { font-size:0.9rem; color:var(--text-primary); font-weight:700; }
+.risk-sublabel { font-size:0.78rem; color:var(--text-muted); }
+.risk-check { color:var(--accent-gold); font-weight:700; }
+
+.goal-chip {
+  display:inline-flex; align-items:center; gap:0.3rem;
+  padding:0.2rem 0.5rem; background:rgba(245,158,11,0.10);
+  border-radius:100px; font-size:0.75rem; font-weight:600;
+  color:var(--accent-gold); margin-right:0.3rem;
+}
+
+.input-error { font-size:0.82rem; color:var(--red); padding:0.25rem 0; }

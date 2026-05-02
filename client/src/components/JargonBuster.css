@@ -1,0 +1,132 @@
+.jargon-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1rem;
+  animation: fadeIn 0.15s ease;
+}
+
+@media (min-width: 600px) {
+  .jargon-overlay {
+    align-items: center;
+  }
+}
+
+.jargon-popup {
+  background: var(--bg-card);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 40px rgba(232,160,32,0.08);
+}
+
+.jargon-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.jargon-term-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(232,160,32,0.1);
+  border: 1px solid rgba(232,160,32,0.2);
+  border-radius: 100px;
+  padding: 0.35rem 0.9rem;
+  color: var(--accent-amber);
+  font-size: 0.95rem;
+}
+
+.jargon-icon { font-size: 0.9rem; }
+
+.jargon-close {
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.jargon-close:hover {
+  color: var(--text-primary);
+  border-color: rgba(255,255,255,0.15);
+}
+
+.jargon-loading {
+  padding: 0.5rem 0;
+}
+
+.jargon-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.jargon-plain {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.jargon-example {
+  background: var(--bg-input);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.example-label, .relevance-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.jargon-example p, .jargon-relevance p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.jargon-relevance {
+  background: var(--green-bg);
+  border: 1px solid rgba(78,173,122,0.15);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.jargon-relevance .relevance-label {
+  color: var(--green);
+}
+
+.jargon-relevance p {
+  color: rgba(78, 173, 122, 0.9);
+}
+
+/* Light theme overrides */
+.jargon-popup { background: var(--bg-card); border: 1px solid var(--border); box-shadow: var(--shadow-lg); }
+.jargon-popup-header { border-bottom-color: var(--border); }
